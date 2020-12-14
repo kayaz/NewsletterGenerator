@@ -1,0 +1,80 @@
+/* reset bootstrap */
+.btn {
+    line-height: normal;
+    margin: 0;
+    font-size: 16px;
+    padding: 4px 20px 6px;
+}
+.btn-primary:focus {
+    box-shadow: 0 0 0 0 rgba(38,143,255,0);
+}
+.btn-primary:not(:disabled):not(.disabled):active:focus {
+    box-shadow: 0 0 0 0 rgba(38,143,255,0);
+}
+.modal-backdrop.show {
+    opacity: .8;
+}
+* {
+    border-radius: 0 !important;
+}
+a:hover {text-decoration: none}
+
+/* bttns */
+table .btn {
+    border-radius: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    padding: 5px 15px 5px 35px;
+    height: 30px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+}
+table .btn i {
+    position: absolute;
+    font-size: 17px;
+    left: 9px;
+    top: 5px;
+}
+
+.modal .col button {
+    padding: 0;
+    background: none;
+    line-height: normal;
+    width: 62px;
+    height: 62px;
+    border: 1px dashed #aeaeae;
+}
+.block {
+    background: #3d79ae
+}
+.cell {
+    outline: 1px dashed #9d9d9d;
+    outline-offset: -1px
+}
+.cell:hover {
+    outline: 1px solid #fff;
+    -webkit-box-shadow: 0 0 15px 0 rgba(0,0,0,0.15);
+    -moz-box-shadow: 0 0 15px 0 rgba(0,0,0,0.215);
+    box-shadow: 0 0 15px 0 rgba(0,0,0,0.15);
+}
+
+.table-row {position: relative}
+.bttn-delete, .bttn-move {position: absolute;top:0;bottom:0;margin: auto;cursor: pointer}
+.bttn-delete {left: -40px}
+.bttn-move {right: -40px}
+.table-row .bttn {
+    background: #222;
+    width: 29px;
+    height: 29px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 21px
+}
+
+#table .ui-sortable-placeholder {height:30px;visibility:visible!important}
+#table .ui-sortable-placeholder {background-color:#fff1b0}
+#table .ui-sortable-helper {display: table}
+#table .ui-sortable-helper {background:white}
