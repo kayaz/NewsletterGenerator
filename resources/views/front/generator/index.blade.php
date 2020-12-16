@@ -5,14 +5,44 @@
     <div class="row d-flex justify-content-center">
         <div class="col-7 pt-5 pb-5">
             <div id="table">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;width:600px;padding:0;border-collapse:collapse">
+                    <tr>
+                        <td width="200" height="40" bgcolor="black">&nbsp;</td>
+                        <td width="200" height="40" bgcolor="black"><img src="{{ asset('uploads/header.jpg') }}" alt="Pobierz obrazek" style="width:200px;height:40px;margin:0;padding:0;border:none;display:block" border="0" width="200" height="40"></td>
+                        <td width="200" height="40" bgcolor="black">&nbsp;</td>
+                    </tr>
+                </table>
+                <table align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;width:600px;padding:0;border-collapse:collapse">
+                    <tr><td width="600" height="30" align="center">&nbsp;</td></tr>
+                </table>
                 @foreach($list as $row)
                     <div class="table-row" data-row="{{$row->id}}" id="recordsArray_{{ $row->id }}">
                         <span class="bttn bttn-delete" data-id="{{$row->id}}"><i class="lar la-trash-alt"></i></span>
-                        @include('template.'.$row->name, array('cell_1' => $row->cell_1, 'cell_2' => $row->cell_2, 'cell_3' => $row->cell_3))
+                        @include('template.'.$row->name, array(
+                            'cell_1' => $row->cell_1,
+                            'cell_2' => $row->cell_2,
+                            'cell_3' => $row->cell_3,
+                            'cell_1_url' => $row->cell_1_url,
+                            'cell_2_url' => $row->cell_2_url,
+                            'cell_3_url' => $row->cell_3_url,
+                            'cell_1_bgcolor' => $row->cell_1_bgcolor,
+                            'cell_2_bgcolor' => $row->cell_2_bgcolor,
+                            'cell_3_bgcolor' => $row->cell_3_bgcolor
+                            ))
                         <span class="bttn bttn-move"><i class="las la-arrows-alt-v"></i></span>
                     </div>
                 @endforeach
             </div>
+            <table align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;width:600px;padding:0;border-collapse:collapse">
+                <tr>
+                    <td width="200" height="126"><img src="{{ asset('uploads/stopka_1.jpg') }}" alt="Pobierz obrazek" style="width:200px;height:126px;margin:0;padding:0;border:none;display:block" border="0" width="200" height="126"></td>
+                    <td width="200" height="126"><img src="{{ asset('uploads/stopka_2.jpg') }}" alt="Pobierz obrazek" style="width:200px;height:126px;margin:0;padding:0;border:none;display:block" border="0" width="200" height="126"></td>
+                    <td width="200" height="126"><img src="{{ asset('uploads/stopka_3.jpg') }}" alt="Pobierz obrazek" style="width:200px;height:126px;margin:0;padding:0;border:none;display:block" border="0" width="200" height="126"></td>
+                </tr>
+            </table>
+            <table align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;width:600px;padding:0;border-collapse:collapse">
+                <tr><td width="600" height="30" align="center">&nbsp;</td></tr>
+            </table>
             <table align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;width:600px;padding:0;border-collapse:collapse">
                 <tr>
                     <td style="width:600px;height:30px" width="600" height="30">
@@ -188,11 +218,10 @@
             $.ajax({
                 type: "POST",
                 url: '{{route('ajax.update')}}',
-                data: { width: width, height: height, cell: cell, id: id },
+                data: { width: width, height: height, cell: "cell_"+cell, id: id },
                 success: function(response) {
                     if(response) {
                         $('body').append(response);
-                        //location.reload();
                     } else {
                         alert('Error');
                     }
