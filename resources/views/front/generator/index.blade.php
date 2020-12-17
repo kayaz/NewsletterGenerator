@@ -1,6 +1,25 @@
 @extends('welcome')
 
 @section('content')
+<style>
+    table img {
+        display: block;
+        border: 0;
+        outline: none;
+        text-decoration: none;
+        -ms-interpolation-mode: bicubic;
+    }
+    table tr {
+        border-collapse: collapse;
+    }
+    table p {
+        margin: 0;
+        -webkit-text-size-adjust: none;
+        -ms-text-size-adjust: none;
+        mso-line-height-rule: exactly;
+        line-height: 190%
+    }
+</style>
 <div class="container">
     <div class="row d-flex justify-content-center">
         <div class="col-7 pt-5 pb-5">
@@ -18,17 +37,7 @@
                 @foreach($list as $row)
                     <div class="table-row" data-row="{{$row->id}}" id="recordsArray_{{ $row->id }}">
                         <span class="bttn bttn-delete" data-id="{{$row->id}}"><i class="lar la-trash-alt"></i></span>
-                        @include('template.'.$row->name, array(
-                            'cell_1' => $row->cell_1,
-                            'cell_2' => $row->cell_2,
-                            'cell_3' => $row->cell_3,
-                            'cell_1_url' => $row->cell_1_url,
-                            'cell_2_url' => $row->cell_2_url,
-                            'cell_3_url' => $row->cell_3_url,
-                            'cell_1_bgcolor' => $row->cell_1_bgcolor,
-                            'cell_2_bgcolor' => $row->cell_2_bgcolor,
-                            'cell_3_bgcolor' => $row->cell_3_bgcolor
-                            ))
+                        @include('template.'.$row->name, $row)
                         <span class="bttn bttn-move"><i class="las la-arrows-alt-v"></i></span>
                     </div>
                 @endforeach
@@ -204,21 +213,16 @@
             }
         });
 
-        $(".cell").click(function() {
-            const width = $(this).attr('width');
-            const height = $(this).attr('height');
-            const cell = $(this).attr('class').match(/\d+/)[0];
+        $("span.modalBttn").click(function() {
+            const width = $(this).closest('td').attr('width');
+            const height = $(this).closest('td').attr('height');
+            const modal = $(this).attr('data-modal');
+            const cell = $(this).closest('td').attr('class').match(/\d+/)[0];
             const id = $(this).closest('.table-row').attr('data-row');
-
-                console.log(width);
-                console.log(height);
-                console.log(cell);
-                console.log(id);
-
             $.ajax({
                 type: "POST",
                 url: '{{route('ajax.update')}}',
-                data: { width: width, height: height, cell: "cell_"+cell, id: id },
+                data: { width: width, height: height, cell: "cell_"+cell, id: id, modal: modal },
                 success: function(response) {
                     if(response) {
                         $('body').append(response);

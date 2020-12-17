@@ -32,6 +32,9 @@ class Block extends Model
         'cell_1_bgcolor',
         'cell_2_bgcolor',
         'cell_3_bgcolor',
+        'cell_1_text',
+        'cell_2_text',
+        'cell_3_text',
         'order'
     ];
 
@@ -77,6 +80,6 @@ class Block extends Model
             $constraint->aspectRatio();
         })->save($filepath);
 
-        $this->update([$cell => $name]);
+        $this->update([$cell => $name, $cell.'_text' => null]);
     }
 }

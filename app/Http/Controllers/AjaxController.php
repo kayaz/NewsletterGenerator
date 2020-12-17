@@ -24,14 +24,15 @@ class AjaxController extends Controller
     {
         $block = Block::find($request->id);
 
-        return view('front.generator.modal', [
+        return view('front.generator.modal-'.$request->modal, [
             'modaltitle'    => 'Dodaj obrazek',
             'modalfilewidth'    => $request->width,
             'modalfileheight'    => $request->height,
-            'modalfilecell'    => $request->cell,
+            'modalcell'    => $request->cell,
             'modalid'    => $request->id,
             'modalbgcolor'    => $block[$request->cell.'_bgcolor'],
-            'modalurl'    =>  $block[$request->cell.'_url']
+            'modalurl'    =>  $block[$request->cell.'_url'],
+            'modaltext'    =>  $block[$request->cell.'_text']
         ])->render();
     }
 
@@ -61,6 +62,13 @@ class AjaxController extends Controller
         if ($request->has('bgcolor')) {
             $block->update([
                 $request->cell.'_bgcolor' => $request->bgcolor
+            ]);
+        }
+
+        if ($request->has('text')) {
+            $block->update([
+                $request->cell.'_text' => $request->text,
+                $request->cell => null
             ]);
         }
 
