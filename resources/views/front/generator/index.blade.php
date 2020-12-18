@@ -24,15 +24,13 @@
     <div class="row d-flex justify-content-center">
         <div class="col-7 pt-5 pb-5">
             <div id="table">
-                <table align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;width:600px;padding:0;border-collapse:collapse">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;width:598px;padding:0;border-collapse:collapse">
                     <tr>
-                        <td width="200" height="40" bgcolor="black">&nbsp;</td>
-                        <td width="200" height="40" bgcolor="black"><img src="{{ asset('uploads/header.jpg') }}" alt="Pobierz obrazek" style="width:200px;height:40px;margin:0;padding:0;border:none;display:block" border="0" width="200" height="40"></td>
-                        <td width="200" height="40" bgcolor="black">&nbsp;</td>
+                        <td width="598" height="52" align="center" bgcolor="black"><img src="{{ asset('uploads/header.jpg') }}" alt="Pobierz obrazek" style="width:199px;height:40px;margin:0;padding:0;border:none;display:block" border="0" width="199" height="40"></td>
                     </tr>
                 </table>
-                <table align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;width:600px;padding:0;border-collapse:collapse">
-                    <tr><td width="600" height="30" align="center">&nbsp;</td></tr>
+                <table align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;width:598px;padding:0;border-collapse:collapse">
+                    <tr><td width="598" height="26" align="center">&nbsp;</td></tr>
                 </table>
                 @foreach($list as $row)
                     <div class="table-row" data-row="{{$row->id}}" id="recordsArray_{{ $row->id }}">
@@ -42,19 +40,19 @@
                     </div>
                 @endforeach
             </div>
-            <table align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;width:600px;padding:0;border-collapse:collapse">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;width:597px;padding:0;border-collapse:collapse">
                 <tr>
-                    <td width="200" height="126"><img src="{{ asset('uploads/stopka_1.jpg') }}" alt="Pobierz obrazek" style="width:200px;height:126px;margin:0;padding:0;border:none;display:block" border="0" width="200" height="126"></td>
-                    <td width="200" height="126"><img src="{{ asset('uploads/stopka_2.jpg') }}" alt="Pobierz obrazek" style="width:200px;height:126px;margin:0;padding:0;border:none;display:block" border="0" width="200" height="126"></td>
-                    <td width="200" height="126"><img src="{{ asset('uploads/stopka_3.jpg') }}" alt="Pobierz obrazek" style="width:200px;height:126px;margin:0;padding:0;border:none;display:block" border="0" width="200" height="126"></td>
+                    <td width="199" height="105"><img src="{{ asset('uploads/stopka_1.jpg') }}" alt="Pobierz obrazek" style="width:199px;height:105px;margin:0;padding:0;border:none;display:block" border="0" width="199" height="105"></td>
+                    <td width="199" height="105"><img src="{{ asset('uploads/stopka_2.jpg') }}" alt="Pobierz obrazek" style="width:199px;height:105px;margin:0;padding:0;border:none;display:block" border="0" width="199" height="105"></td>
+                    <td width="199" height="105"><img src="{{ asset('uploads/stopka_3.jpg') }}" alt="Pobierz obrazek" style="width:199px;height:105px;margin:0;padding:0;border:none;display:block" border="0" width="199" height="105"></td>
                 </tr>
             </table>
-            <table align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;width:600px;padding:0;border-collapse:collapse">
-                <tr><td width="600" height="30" align="center">&nbsp;</td></tr>
+            <table align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;width:598px;padding:0;border-collapse:collapse">
+                <tr><td width="598" height="26" align="center">&nbsp;</td></tr>
             </table>
-            <table align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;width:600px;padding:0;border-collapse:collapse">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;width:598px;padding:0;border-collapse:collapse">
                 <tr>
-                    <td style="width:600px;height:30px" width="600" height="30">
+                    <td style="width:598px;height:30px" width="598" height="30">
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#rowModal"><i class="las la-plus-square"></i> Dodaj moduł</button>
                     </td>
                 </tr>

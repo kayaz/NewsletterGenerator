@@ -17,7 +17,7 @@
                         </div>
                     </div>
                     <div class="col-12">
-                        <textarea id="" cols="30" rows="10" class="tinymce" name="text">{!! $modaltext !!}</textarea>
+                        <textarea id="" cols="30" rows="10" class="tinymce" id="tinyeditor" name="text">{!! $modaltext !!}</textarea>
                     </div>
                     <div class="col-12">
                         <input type="hidden" name="cell" value="{{$modalcell}}">
@@ -46,7 +46,10 @@
         hideAfterPaletteSelect:true,
         palette: [
             ['#AEA935', '#54BBBA', '#E09F25', '#804180', '#00AEC7', '#7197CA', '#EE8694', '#FFD616', '#A8438D', '#199C69', '#E95F47', '#0062A9', '#9C9E9F', '#97BF0D', '#55555A', '#ADBCC9', '#B6D9B7', '#B29FB0', '#D9D1C8', '#F08F75', '#FDD384', '#7ABCCE', '#DDBBA3', '#7FB8AC', '#DBB4B7', '#C8DCDC', '#D9C594', '#CAC7C4', '#C0D272']
-        ]
+        ],
+        change: function(color) {
+            tinymce.activeEditor.getBody().style.backgroundColor = color;
+        }
     });
     tinymce.init({
         selector: ".tinymce",
@@ -56,8 +59,13 @@
         menubar: false,
         plugins: "link image code textcolor colorpicker",
         forced_root_block : "p",
-        toolbar1: "bold italic | forecolor | fontselect fontsizeselect | link | alignleft aligncenter alignright",
-        relative_urls: false
+        toolbar1: "bold italic | forecolor | fontselect fontsizeselect | link",
+        relative_urls: false,
+        setup: function (ed) {
+            ed.on('init', function() {
+                console.log('open');
+                tinymce.activeEditor.getBody().style.backgroundColor = '{{$modalbgcolor}}';
+            });
+        }
     });
-
 </script>
