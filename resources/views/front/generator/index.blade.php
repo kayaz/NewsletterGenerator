@@ -42,13 +42,14 @@
             </div>
             <table align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;width:600px;padding:0;border-collapse:collapse">
                 <tr>
-                    <td width="600px" width="600" align="center" style="font-family: Arial, sans-serif;line-height: 130%;font-size: 18px;color:#595959"><?=polishMonth();?> <?=date('Y');?></td>
+                    <td width="600px" width="600" align="center" style="font-family: Arial, sans-serif;line-height: 120%;font-size: 22px;color:#000000;font-weight: bold"><?=polishMonth();?> <?=date('Y');?></td>
                 </tr>
                 <tr>
-                    <td width="600px" width="600" align="center" style="font-family: Arial, sans-serif;line-height: 130%;font-size: 18px;color:#595959">Materiały do użytku wewnętrznego</td>
+                    <td width="600px" width="600" align="center" style="font-family: Arial, sans-serif;line-height: 110%;font-size: 17px;color:#000000">Materiały do użytku wewnętrznego</td>
                 </tr>
                 <tr>
-                    <td width="600px" width="600" align="center" style="font-family: Arial, sans-serif;line-height: 130%;font-size: 18px;color:#595959">Veolia Polska</td>
+                    <td width="600px" width="600" align="center" style="font-family: Arial, sans-serif;line-height: 110%;font-size: 17px;color:#000000">
+                        <a href="ttps://www.veolia.pl/" target="_blank" style="font-family: Arial, sans-serif;color:#000000">Veolia Polska</a></td>
                 </tr>
             </table>
             <table align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;width:600px;padding:0;border-collapse:collapse">
