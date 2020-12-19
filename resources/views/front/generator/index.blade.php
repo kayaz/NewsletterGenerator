@@ -69,6 +69,16 @@
                 </tr>
             </table>
         </div>
+        <div class="col-5 pt-5">
+            <form action="{{route('ajax.send')}}" class="row">
+                <div class="col-12">
+                    <input type="text" class="form-control" name="mail" id="">
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">WYŚLIJ</button>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 <div class="modal fade" id="rowModal" tabindex="-1" role="dialog" aria-labelledby="rowModalLabel" aria-hidden="true">

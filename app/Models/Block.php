@@ -3,11 +3,14 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Str;
 use Intervention\Image\ImageManagerStatic as ImageManager;
 
 class Block extends Model
 {
+    use Notifiable;
+
     /**
      * The table associated with the model.
      *

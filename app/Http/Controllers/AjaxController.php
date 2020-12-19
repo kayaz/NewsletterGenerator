@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\SendMail;
 use App\Models\Block;
+//use App\Notifications\SendEmail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Notification;
 
 class AjaxController extends Controller
 {
@@ -80,6 +84,14 @@ class AjaxController extends Controller
     public function sort(Request $request, Block $block)
     {
         $block->sort($request);
+    }
+
+    public function send(Request $request)
+    {
+        $data = Block::all()->sortBy("order");
+        Mail::to($request->mail)->send(new SendMail($data));
+
+        return redirect()->back();
     }
 
     public function destroy(Request $request)

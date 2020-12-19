@@ -20,3 +20,4 @@ Route::post('ajax/update', [\App\Http\Controllers\AjaxController::class, 'update
 Route::post('ajax/set', [\App\Http\Controllers\AjaxController::class, 'sort'])->name('ajax.sort');
 Route::post('ajax/store', [\App\Http\Controllers\AjaxController::class, 'store'])->name('ajax.store');
 Route::delete('ajax/delete', [\App\Http\Controllers\AjaxController::class, 'destroy'])->name('ajax.destroy');
+Route::get('ajax/send', [\App\Http\Controllers\AjaxController::class, 'send'])->name('ajax.send');
