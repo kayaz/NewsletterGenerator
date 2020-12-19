@@ -40,11 +40,22 @@
                     </div>
                 @endforeach
             </div>
-            <table align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;width:597px;padding:0;border-collapse:collapse">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;width:600px;padding:0;border-collapse:collapse">
                 <tr>
-                    <td width="199" height="105"><img src="{{ asset('uploads/stopka_1.jpg') }}" alt="Pobierz obrazek" style="width:199px;height:105px;margin:0;padding:0;border:none;display:block" border="0" width="199" height="105"></td>
-                    <td width="199" height="105"><img src="{{ asset('uploads/stopka_2.jpg') }}" alt="Pobierz obrazek" style="width:199px;height:105px;margin:0;padding:0;border:none;display:block" border="0" width="199" height="105"></td>
-                    <td width="199" height="105"><img src="{{ asset('uploads/stopka_3.jpg') }}" alt="Pobierz obrazek" style="width:199px;height:105px;margin:0;padding:0;border:none;display:block" border="0" width="199" height="105"></td>
+                    <td width="600px" width="600" align="center" style="font-family: Arial, sans-serif;line-height: 130%;font-size: 18px;color:#595959"><?=polishMonth();?> <?=date('Y');?></td>
+                </tr>
+                <tr>
+                    <td width="600px" width="600" align="center" style="font-family: Arial, sans-serif;line-height: 130%;font-size: 18px;color:#595959">Materiały do użytku wewnętrznego</td>
+                </tr>
+                <tr>
+                    <td width="600px" width="600" align="center" style="font-family: Arial, sans-serif;line-height: 130%;font-size: 18px;color:#595959">Veolia Polska</td>
+                </tr>
+            </table>
+            <table align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;width:600px;padding:0;border-collapse:collapse">
+                <tr>
+                    <td width="200" height="76"><img src="{{ asset('uploads/stopka_1.jpg') }}" alt="Pobierz obrazek" style="width:200px;height:76px;margin:0;padding:0;border:none;display:block" border="0" width="200" height="76"></td>
+                    <td width="200" height="76"><img src="{{ asset('uploads/stopka_2.jpg') }}" alt="Pobierz obrazek" style="width:200px;height:76px;margin:0;padding:0;border:none;display:block" border="0" width="200" height="76"></td>
+                    <td width="200" height="76"><img src="{{ asset('uploads/stopka_3.jpg') }}" alt="Pobierz obrazek" style="width:200px;height:76px;margin:0;padding:0;border:none;display:block" border="0" width="200" height="76"></td>
                 </tr>
             </table>
             <table align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;width:598px;padding:0;border-collapse:collapse">
@@ -64,14 +75,14 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Wybierz moduł</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Wybierz wzór siatki</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
                 <div class="row">
-                    <div class="col">
+                    <div class="col-3">
                         <button id="grid-x3">
                             <table align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;width:60px;padding:0;border-collapse:collapse">
                                 <tr>
@@ -84,7 +95,16 @@
                             </table>
                         </button>
                     </div>
-                    <div class="col">
+                    <div class="col-3">
+                        <button id="grid-x1">
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" width="60" height="18" style="margin:0 auto;width:60px;padding:0;border-collapse:collapse">
+                                <tr>
+                                    <td style="width:60px;height:18px" width="60" height="18" class="block"></td>
+                                </tr>
+                            </table>
+                        </button>
+                    </div>
+                    <div class="col-3">
                         <button id="grid-x2x1">
                             <table align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;width:60px;padding:0;border-collapse:collapse">
                                 <tr>
@@ -95,7 +115,7 @@
                             </table>
                         </button>
                     </div>
-                    <div class="col">
+                    <div class="col-3">
                         <button id="grid-x1x2">
                             <table align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;width:60px;padding:0;border-collapse:collapse">
                                 <tr>
@@ -106,7 +126,7 @@
                             </table>
                         </button>
                     </div>
-                    <div class="col">
+                    <div class="col-3">
                         <button id="grid-x1-1x1">
                             <table align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;width:60px;padding:0;border-collapse:collapse">
                                 <tr>
@@ -127,7 +147,7 @@
                             </table>
                         </button>
                     </div>
-                    <div class="col">
+                    <div class="col-3">
                         <button id="grid-x1x1-1">
                             <table align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;width:60px;padding:0;border-collapse:collapse">
                                 <tr>
@@ -144,6 +164,24 @@
                                             </tr>
                                         </table>
                                     </td>
+                                </tr>
+                            </table>
+                        </button>
+                    </div>
+                    <div class="col-3">
+                        <button id="grid-x1x3">
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;width:60px;padding:0;border-collapse:collapse">
+                                <tr>
+                                    <td style="width:60px;height:39px" class="block" class="block" width="60" height="39"></td>
+                                </tr>
+                            </table>
+                        </button>
+                    </div>
+                    <div class="col-3">
+                        <button id="grid-3x3">
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" width="60" height="60" style="margin:0 auto;width:60px;padding:0;border-collapse:collapse">
+                                <tr>
+                                    <td style="width:60px;height:60px" class="block" class="block" width="60" height="60"></td>
                                 </tr>
                             </table>
                         </button>

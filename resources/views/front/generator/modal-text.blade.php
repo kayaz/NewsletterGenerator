@@ -1,4 +1,4 @@
-<div class="modal" id="cellclickmodal" tabindex="-1" aria-hidden="true">
+<div class="modal fade" id="cellclickmodal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
@@ -57,15 +57,27 @@
         branding: false,
         height: 180,
         menubar: false,
-        plugins: "link image code textcolor colorpicker",
+        convert_urls: false,
+        remove_script_host: false,
+        plugins: [
+            'advlist autolink lists link image charmap print preview anchor',
+            'searchreplace visualblocks code fullscreen',
+            'insertdatetime media table paste code help wordcount'
+        ],
         forced_root_block : "p",
         toolbar1: "bold italic | forecolor | fontselect fontsizeselect | link",
         relative_urls: false,
+        font_formats: "Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde",
         setup: function (ed) {
             ed.on('init', function() {
-                console.log('open');
+                this.getDoc().body.style.fontFamily = 'Arial';
                 tinymce.activeEditor.getBody().style.backgroundColor = '{{$modalbgcolor}}';
             });
+        }
+    });
+    $(document).on('focusin', function(e) {
+        if ($(e.target).closest(".tox-tinymce, .tox-tinymce-aux, .moxman-window, .tam-assetmanager-root").length) {
+            e.stopImmediatePropagation();
         }
     });
 </script>

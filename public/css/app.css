@@ -37,13 +37,17 @@ table .btn i {
     top: 5px;
 }
 
-.modal .col button {
+.modal .col-3 button {
     padding: 0;
     background: none;
     line-height: normal;
     width: 62px;
     height: 62px;
     border: 1px dashed #aeaeae;
+    margin:5px
+}
+.modal .col-3 button:hover {
+    border: 1px solid #f9e330;
 }
 .block {
     background: #3d79ae
@@ -80,6 +84,9 @@ table .btn i {
 #table .ui-sortable-helper {display: table}
 #table .ui-sortable-helper {background:white}
 
+#rowModal .modal-dialog {
+    max-width: 380px
+}
 .modal-img, .modal-text {
     position: absolute;
     width: 34px;
