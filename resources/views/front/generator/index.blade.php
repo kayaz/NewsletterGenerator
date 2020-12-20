@@ -40,6 +40,16 @@
                     </div>
                 @endforeach
             </div>
+            <table align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;width:598px;padding:0;border-collapse:collapse">
+                <tr>
+                    <td style="width:598px;height:30px" width="598" height="30" class="td-button">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#rowModal"><i class="las la-plus-square"></i> Dodaj moduł</button>
+                    </td>
+                </tr>
+            </table>
+            <table align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;width:598px;padding:0;border-collapse:collapse">
+                <tr><td width="598" height="26" align="center">&nbsp;</td></tr>
+            </table>
             <table align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;width:600px;padding:0;border-collapse:collapse">
                 <tr>
                     <td width="600px" width="600" align="center" style="font-family: Arial, sans-serif;line-height: 120%;font-size: 22px;color:#000000;font-weight: bold"><?=polishMonth();?> <?=date('Y');?></td>
@@ -54,9 +64,11 @@
             </table>
             <table align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;width:600px;padding:0;border-collapse:collapse">
                 <tr>
-                    <td width="200" height="76"><img src="{{ asset('uploads/stopka_1.jpg') }}" alt="Pobierz obrazek" style="width:200px;height:76px;margin:0;padding:0;border:none;display:block" border="0" width="200" height="76"></td>
-                    <td width="200" height="76"><img src="{{ asset('uploads/stopka_2.jpg') }}" alt="Pobierz obrazek" style="width:200px;height:76px;margin:0;padding:0;border:none;display:block" border="0" width="200" height="76"></td>
-                    <td width="200" height="76"><img src="{{ asset('uploads/stopka_3.jpg') }}" alt="Pobierz obrazek" style="width:200px;height:76px;margin:0;padding:0;border:none;display:block" border="0" width="200" height="76"></td>
+                    <td width="120" height="76"><img src="{{ asset('uploads/stopka_1.jpg') }}" alt="Pobierz obrazek" style="width:120px;height:76px;margin:0;padding:0;border:none;display:block" border="0" width="120" height="76"></td>
+                    <td width="120" height="76"><a href="https://oneintranet.veolia.com/pol-rin-innowacje/home" target="_blank"><img src="{{ asset('uploads/stopka_2.jpg') }}" alt="Pobierz obrazek" style="width:120px;height:76px;margin:0;padding:0;border:none;display:block" border="0" width="120" height="76"></a></td>
+                    <td width="120" height="76"><a href="https://oneintranet.veolia.com/pol-rin-innowacje/mapa-ekspertow" target="_blank"><img src="{{ asset('uploads/stopka_3.jpg') }}" alt="Pobierz obrazek" style="width:120px;height:76px;margin:0;padding:0;border:none;display:block" border="0" width="120" height="76"></a></td>
+                    <td width="120" height="76"><a href="https://oneintranet.veolia.com/pol-rin-innowacje/repozytorium" target="_blank"><img src="{{ asset('uploads/stopka_4.jpg') }}" alt="Pobierz obrazek" style="width:120px;height:76px;margin:0;padding:0;border:none;display:block" border="0" width="120" height="76"></a></td>
+                    <td width="120" height="76"><img src="{{ asset('uploads/stopka_5.jpg') }}" alt="Pobierz obrazek" style="width:120px;height:76px;margin:0;padding:0;border:none;display:block" border="0" width="120" height="76"></td>
                 </tr>
             </table>
             <table align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;width:598px;padding:0;border-collapse:collapse">
@@ -64,21 +76,20 @@
             </table>
             <table align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;width:598px;padding:0;border-collapse:collapse">
                 <tr>
-                    <td style="width:598px;height:30px" width="598" height="30">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#rowModal"><i class="las la-plus-square"></i> Dodaj moduł</button>
+                    <td width="598" align="center">
+                        <div class="container">
+                            <form action="{{route('ajax.send')}}" class="row">
+                                <div class="col-9 p-0">
+                                    <input type="text" class="form-control" name="mail" id="" placeholder="Wpisz adres e-mail">
+                                </div>
+                                <div class="col-3 p-0">
+                                    <button type="submit" class="btn btn-primary w-100 h-100">Testuj</button>
+                                </div>
+                            </form>
+                        </div>
                     </td>
                 </tr>
             </table>
-        </div>
-        <div class="col-5 pt-5">
-            <form action="{{route('ajax.send')}}" class="row">
-                <div class="col-12">
-                    <input type="text" class="form-control" name="mail" id="">
-                </div>
-                <div class="col-12">
-                    <button type="submit" class="btn btn-primary">WYŚLIJ</button>
-                </div>
-            </form>
         </div>
     </div>
 </div>

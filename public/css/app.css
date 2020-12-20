@@ -20,7 +20,7 @@
 a:hover {text-decoration: none}
 
 /* bttns */
-table .btn {
+table .td-button .btn {
     border-radius: 0;
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
@@ -69,7 +69,7 @@ table .btn i {
 .bttn-delete {left: -40px}
 .bttn-move {right: -40px}
 .table-row .bttn {
-    background: #222;
+    background: #007bff;
     width: 29px;
     height: 29px;
     display: flex;
@@ -77,6 +77,9 @@ table .btn i {
     align-items: center;
     color: white;
     font-size: 21px
+}
+.table-row .bttn:hover {
+    background: #0069d9;
 }
 
 #table .ui-sortable-placeholder {height:30px;visibility:visible!important}
