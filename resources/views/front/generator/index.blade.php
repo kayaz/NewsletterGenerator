@@ -90,6 +90,19 @@
                     </td>
                 </tr>
             </table>
+            <table align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;width:598px;padding:0;border-collapse:collapse">
+                <tr>
+                    <td width="598" align="center">
+                        <div class="container">
+                            <form action="{{route('ajax.download')}}" class="row d-flex justify-content-center">
+                                <div class="col-7 pt-5">
+                                    <button type="submit" class="btn btn-success bttn-download w-100 h-100">Pobierz</button>
+                                </div>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+            </table>
         </div>
     </div>
 </div>
@@ -217,119 +230,5 @@
 
 @push('scripts')
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script>
-    var fixHelper=function(b,a){a.children().each(function(){var c=$(this).clone();$(this).width($(this).width())});return a};
-
-    // Sortowanie listy
-    jQuery.fn.sortuj = function(a) {
-        this.sortable({
-            cursor: "move",
-            handle: ".bttn-move",
-            start: function(d, c) {
-                var b = $(this).sortable("instance");
-                c.placeholder.height(c.helper.height());
-                b.containment[3] += c.helper.height() * 1.5 - b.offset.click.top;
-                b.containment[1] -= b.offset.click.top
-            },
-            helper: function(b, c) {
-                c.children().each(function() {
-                    $(this).width($(this).width())
-                });
-                return c
-            },
-            zIndex: 9999,
-            containment: "#table",
-            axis: "y",
-            update: function() {
-                var b = $(this).sortable("serialize");
-                $.ajaxSetup({
-                    headers: {
-                        "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content")
-                    }
-                });
-                $.ajax({
-                    data: b,
-                    type: "POST",
-                    url: '{{route('ajax.sort')}}',
-                    success: function(c) {
-
-                    },
-                    error: function() {
-
-                    }
-                })
-            }
-        }).disableSelection()
-    };
-
-    $(document).ready(function(){
-        $("#table").sortuj();
-
-        $.ajaxSetup({
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            }
-        });
-
-        $("span.modalBttn").click(function() {
-            const width = $(this).closest('td').attr('width');
-            const height = $(this).closest('td').attr('height');
-            const modal = $(this).attr('data-modal');
-            const cell = $(this).closest('td').attr('class').match(/\d+/)[0];
-            const id = $(this).closest('.table-row').attr('data-row');
-            $.ajax({
-                type: "POST",
-                url: '{{route('ajax.update')}}',
-                data: { width: width, height: height, cell: "cell_"+cell, id: id, modal: modal },
-                success: function(response) {
-                    if(response) {
-                        $('body').append(response);
-                    } else {
-                        alert('Error');
-                    }
-                },
-                error: function () {
-                    alert('Wystąpił błąd');
-                }
-            })
-        });
-
-        $(".bttn-delete").click(function() {
-            const row_id = $(this).attr('data-id');
-            $.ajax({
-                type: "POST",
-                url: '{{route('ajax.destroy')}}',
-                data: { _method: 'delete', id: row_id },
-                success: function(response) {
-                    if(response) {
-                        $('[data-row^="' + row_id + '"]').remove();
-                    } else {
-                        alert('Error');
-                    }
-                },
-                error: function () {
-                    alert('Wystąpił błąd');
-                }
-            })
-        });
-        $(".modal-body button").click(function(){
-            const id = $(this).attr('id');
-            $.ajax({
-                type: "POST",
-                url: '{{route('ajax.load')}}',
-                data: { template: id },
-                success: function(response) {
-                    if(response) {
-                        location.reload();
-                    } else {
-                        alert('Error');
-                    }
-                },
-                error: function () {
-                    alert('Wystąpił błąd');
-                }
-            })
-        });
-    });
-</script>
+<script>const fixHelper=function(b,a){a.children().each(function(){var c=$(this).clone();$(this).width($(this).width())});return a};jQuery.fn.sortuj=function(a){this.sortable({cursor:"move",handle:".bttn-move",start:function(d,c){var b=$(this).sortable("instance");c.placeholder.height(c.helper.height());b.containment[3]+=c.helper.height()*1.5-b.offset.click.top;b.containment[1]-=b.offset.click.top},helper:function(b,c){c.children().each(function(){$(this).width($(this).width())});return c},zIndex:9999,containment:"#table",axis:"y",update:function(){var b=$(this).sortable("serialize");$.ajaxSetup({headers:{"X-CSRF-TOKEN":$('meta[name="csrf-token"]').attr("content")}});$.ajax({data:b,type:"POST",url:'{{route('ajax.sort')}}',success:function(c){},error:function(){}})}}).disableSelection()};$(document).ready(function(){$("#table").sortuj();$.ajaxSetup({headers:{'X-CSRF-TOKEN':$('meta[name="csrf-token"]').attr('content')}});$("span.modalBttn").click(function(){const width=$(this).closest('td').attr('width');const height=$(this).closest('td').attr('height');const modal=$(this).attr('data-modal');const cell=$(this).closest('td').attr('class').match(/\d+/)[0];const id=$(this).closest('.table-row').attr('data-row');$.ajax({type:"POST",url:'{{route('ajax.update')}}',data:{width:width,height:height,cell:"cell_"+cell,id:id,modal:modal},success:function(response){if(response){$('body').append(response);}else{alert('Error');}},error:function(){alert('Wystąpił błąd');}})});$(".bttn-delete").click(function(){const row_id=$(this).attr('data-id');$.ajax({type:"POST",url:'{{route('ajax.destroy')}}',data:{_method:'delete',id:row_id},success:function(response){if(response){$('[data-row^="'+row_id+'"]').remove();}else{alert('Error');}},error:function(){alert('Wystąpił błąd');}})});$(".modal-body button").click(function(){const id=$(this).attr('id');$.ajax({type:"POST",url:'{{route('ajax.load')}}',data:{template:id},success:function(response){if(response){location.reload();}else{alert('Error');}},error:function(){alert('Wystąpił błąd');}})});});</script>
 @endpush

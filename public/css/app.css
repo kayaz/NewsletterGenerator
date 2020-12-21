@@ -36,7 +36,10 @@ table .btn i {
     left: 9px;
     top: 5px;
 }
-
+.bttn-download {
+    padding: 15px 20px;
+    font-size: 17px;
+}
 .modal .col-3 button {
     padding: 0;
     background: none;

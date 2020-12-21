@@ -21,3 +21,4 @@ Route::post('ajax/set', [\App\Http\Controllers\AjaxController::class, 'sort'])->
 Route::post('ajax/store', [\App\Http\Controllers\AjaxController::class, 'store'])->name('ajax.store');
 Route::delete('ajax/delete', [\App\Http\Controllers\AjaxController::class, 'destroy'])->name('ajax.destroy');
 Route::get('ajax/send', [\App\Http\Controllers\AjaxController::class, 'send'])->name('ajax.send');
+Route::get('ajax/download', [\App\Http\Controllers\AjaxController::class, 'download'])->name('ajax.download');

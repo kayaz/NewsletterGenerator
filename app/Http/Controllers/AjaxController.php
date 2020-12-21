@@ -4,10 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Mail\SendMail;
 use App\Models\Block;
-//use App\Notifications\SendEmail;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Facades\Notification;
+
 
 class AjaxController extends Controller
 {
@@ -42,15 +42,6 @@ class AjaxController extends Controller
 
     public function store(Request $request)
     {
-
-        //  "_token" => "3IRchjOWVFwMFjkgrq8EpUjlQgeOpENxDCq1FJJF"
-        //  "url" => null
-        //  "file" => "branzino-with-roasted-beets_1400x850.jpg"
-        //  "cell" => "cell_2"
-        //  "id" => "1"
-        //  "width" => "180"
-        //  "height" => "180"
-
         $block = Block::find($request->id);
 
         if ($request->hasFile('file')) {
@@ -75,9 +66,6 @@ class AjaxController extends Controller
                 $request->cell => null
             ]);
         }
-
-        //dd($request->all());
-
         return redirect()->back();
     }
 
@@ -92,6 +80,17 @@ class AjaxController extends Controller
         Mail::to($request->mail)->send(new SendMail($data));
 
         return redirect()->back();
+    }
+
+    public function download()
+    {
+        $data = Block::all()->sortBy("order");
+        Storage::disk('public_uploads')->put('mailing.html',
+            view('email.template')
+                ->with(["list" => $data])
+                ->render(), 'public'
+        );
+        return response()->download(public_path('/uploads/mailing.html'));
     }
 
     public function destroy(Request $request)
