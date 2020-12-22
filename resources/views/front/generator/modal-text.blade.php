@@ -45,7 +45,7 @@
         color: '{{$modalbgcolor}}',
         hideAfterPaletteSelect:true,
         palette: [
-            ['#AEA935', '#54BBBA', '#E09F25', '#804180', '#00AEC7', '#7197CA', '#EE8694', '#FFD616', '#A8438D', '#199C69', '#E95F47', '#0062A9', '#9C9E9F', '#97BF0D', '#55555A', '#ADBCC9', '#B6D9B7', '#B29FB0', '#D9D1C8', '#F08F75', '#FDD384', '#7ABCCE', '#DDBBA3', '#7FB8AC', '#DBB4B7', '#C8DCDC', '#D9C594', '#CAC7C4', 'white', '#C0D272']
+            ['#AEA935', '#54BBBA', '#E09F25', '#804180', '#00AEC7', '#7197CA', '#EE8694', '#FFD616', '#A8438D', '#199C69', '#E95F47', '#0062A9', '#9C9E9F', '#97BF0D', '#55555A', '#ADBCC9', '#B6D9B7', '#B29FB0', '#D9D1C8', '#F08F75', '#FDD384', '#7ABCCE', '#DDBBA3', '#7FB8AC', '#DBB4B7', '#C8DCDC', '#D9C594', '#CAC7C4', '#C0D272', 'white']
         ],
         change: function(color) {
             tinymce.activeEditor.getBody().style.backgroundColor = color;
@@ -65,7 +65,37 @@
             'insertdatetime media table paste code help wordcount'
         ],
         color_map: [
-            '#AEA935', '#54BBBA', '#E09F25', '#804180', '#00AEC7', '#7197CA', '#EE8694', '#FFD616', '#A8438D', '#199C69', '#E95F47', '#0062A9', '#9C9E9F', '#97BF0D', '#55555A', '#ADBCC9', '#B6D9B7', '#B29FB0', '#D9D1C8', '#F08F75', '#FDD384', '#7ABCCE', '#DDBBA3', '#7FB8AC', '#DBB4B7', '#C8DCDC', '#D9C594', '#CAC7C4', 'white', '#C0D272'
+            '#AEA935', 'Kolor',
+            '#54BBBA', 'Kolor',
+            '#E09F25', 'Kolor',
+            '#804180', 'Kolor',
+            '#00AEC7', 'Kolor',
+            '#7197CA', 'Kolor',
+            '#EE8694', 'Kolor',
+            '#FFD616', 'Kolor',
+            '#A8438D', 'Kolor',
+            '#199C69', 'Kolor',
+            '#E95F47', 'Kolor',
+            '#0062A9', 'Kolor',
+            '#9C9E9F', 'Kolor',
+            '#97BF0D', 'Kolor',
+            '#55555A', 'Kolor',
+            '#ADBCC9', 'Kolor',
+            '#B6D9B7', 'Kolor',
+            '#B29FB0', 'Kolor',
+            '#D9D1C8', 'Kolor',
+            '#F08F75', 'Kolor',
+            '#FDD384', 'Kolor',
+            '#7ABCCE', 'Kolor',
+            '#DDBBA3', 'Kolor',
+            '#7FB8AC', 'Kolor',
+            '#DBB4B7', 'Kolor',
+            '#C8DCDC', 'Kolor',
+            '#D9C594', 'Kolor',
+            '#CAC7C4', 'Kolor',
+            '#C0D272', 'Kolor',
+            '#FFFFFF', 'white',
+            '#000000', 'black'
         ],
         custom_colors: false,
         forced_root_block : "p",

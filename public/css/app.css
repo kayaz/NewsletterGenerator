@@ -37,8 +37,10 @@ table .btn i {
     top: 5px;
 }
 .bttn-download {
-    padding: 15px 20px;
-    font-size: 17px;
+    padding: 0;
+    font-size: 16px;
+    height: 38px;
+    margin-top: 26px;
 }
 .modal .col-3 button {
     padding: 0;
@@ -73,8 +75,8 @@ table .btn i {
 .bttn-move {right: -40px}
 .table-row .bttn {
     background: #007bff;
-    width: 29px;
-    height: 29px;
+    width: 38px;
+    height: 38px;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -95,8 +95,8 @@
                     <td width="598" align="center">
                         <div class="container">
                             <form action="{{route('ajax.download')}}" class="row d-flex justify-content-center">
-                                <div class="col-7 pt-5">
-                                    <button type="submit" class="btn btn-success bttn-download w-100 h-100">Pobierz</button>
+                                <div class="col-12 p-0">
+                                    <button type="submit" class="btn btn-success bttn-download w-100 ">Pobierz</button>
                                 </div>
                             </form>
                         </div>
