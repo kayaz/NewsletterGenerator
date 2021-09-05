@@ -79,10 +79,21 @@ class Block extends Model
         $file->storeAs('/', $name, 'public_uploads');
 
         $filepath = public_path('/uploads/' . $name);
-        ImageManager::make($filepath)->fit($width, $height, function ($constraint) {
-            $constraint->aspectRatio();
-        })->save($filepath);
+        $data = getimagesize(public_path('/uploads/' . $name));
+        if($data) {
+            $extensions = array( 'image/jpeg', 'image/png', 'image/gif' );
+            if( in_array( $data['mime'], $extensions )) {
+                ImageManager::make($filepath)->fit($width, $height, function ($constraint) {
+                    $constraint->aspectRatio();
+                })->save($filepath);
 
-        $this->update([$cell => $name, $cell.'_text' => null]);
+                $this->update([$cell => $name, $cell . '_text' => null]);
+            } else {
+                return false;
+            }
+        } else {
+            unlink($filepath);
+            return false;
+        }
     }
 }
