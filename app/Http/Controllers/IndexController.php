@@ -8,6 +8,6 @@ class IndexController extends Controller
 {
     function index(){
 
-        return view('front.generator.index', ['list'=>Block::all()->sortBy("order")]);
+        return view('front.generator.index', ['list' => Block::all()->sortBy("order")]);
     }
 }

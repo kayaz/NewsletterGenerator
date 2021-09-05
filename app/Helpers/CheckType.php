@@ -4,7 +4,7 @@ if (! function_exists('checkType')) {
     function checkType($string)
     {
         if(isset($string)) {
-            $filepath = asset('uploads/'.$string);
+            $filepath = asset('https://www.inon-news.pl/public/uploads/'.$string);
             $img = public_path('/uploads/' . $string);
 
             if(file_exists($img)) {
