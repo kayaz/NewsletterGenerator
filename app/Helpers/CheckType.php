@@ -5,7 +5,7 @@ if (! function_exists('checkType')) {
     {
         if(isset($string)) {
             $filepath = 'https://www.inon-news.pl/public/uploads/'.$string;
-            $img = 'https://www.inon-news.pl/public/uploads/' . $string;
+            $img = public_path('/uploads/' . $string);
 
             if(file_exists($img)) {
                 $data = getimagesize($img);
