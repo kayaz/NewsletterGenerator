@@ -99,9 +99,9 @@
         ],
         custom_colors: false,
         forced_root_block : "p",
-        toolbar1: "bold italic | forecolor | fontselect fontsizeselect | link",
+        toolbar1: "bold italic | forecolor | fontselect fontsizeselect | link | alignleft aligncenter alignright",
         relative_urls: false,
-        font_formats: "Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde",
+        font_formats: "Arial=Arial, Helvetica Neue, Helvetica, sans-serif; Arial Black=Arial Black, Arial Bold, Gadget, sans-serif",
         setup: function (ed) {
             ed.on('init', function() {
                 this.getDoc().body.style.fontFamily = 'Arial';
