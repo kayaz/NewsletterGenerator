@@ -4,8 +4,8 @@ if (! function_exists('checkType')) {
     function checkType($string)
     {
         if(isset($string)) {
-            $filepath = asset('/uploads/'.$string);
-            $img = public_path('/uploads/' . $string);
+            $filepath = 'https://www.inon-news.pl/public/uploads/'.$string;
+            $img = 'https://www.inon-news.pl/public/uploads/' . $string;
 
             if(file_exists($img)) {
                 $data = getimagesize($img);

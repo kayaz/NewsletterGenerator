@@ -26,7 +26,7 @@
             <div id="table">
                 <table align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;width:598px;padding:0;border-collapse:collapse">
                     <tr>
-                        <td width="598" height="52" align="center" bgcolor="black"><img src="{{ asset('uploads/header.jpg') }}" alt="Pobierz obrazek" style="width:199px;height:40px;margin:0;padding:0;border:none;display:block" border="0" width="199" height="40"></td>
+                        <td width="598" height="52" align="center" bgcolor="black"><img src="https://www.inon-news.pl/public/uploads/header.jpg" alt="Pobierz obrazek" style="width:199px;height:40px;margin:0;padding:0;border:none;display:block" border="0" width="199" height="40"></td>
                     </tr>
                 </table>
                 <table align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;width:598px;padding:0;border-collapse:collapse">
@@ -52,11 +52,11 @@
             </table>
             <table align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;width:600px;padding:0;border-collapse:collapse">
                 <tr>
-                    <td width="120" height="76"><img src="{{ asset('uploads/stopka_1.jpg') }}" alt="Pobierz obrazek" style="width:120px;height:76px;margin:0;padding:0;border:none;display:block" border="0" width="120" height="76"></td>
-                    <td width="120" height="76"><a href="https://oneintranet.veolia.com/pol-rin-innowacje/home" target="_blank"><img src="{{ asset('uploads/stopka_2.jpg') }}" alt="Pobierz obrazek" style="width:120px;height:76px;margin:0;padding:0;border:none;display:block" border="0" width="120" height="76"></a></td>
-                    <td width="120" height="76"><a href="https://oneintranet.veolia.com/pol-rin-innowacje/mapa-ekspertow" target="_blank"><img src="{{ asset('uploads/stopka_3.jpg') }}" alt="Pobierz obrazek" style="width:120px;height:76px;margin:0;padding:0;border:none;display:block" border="0" width="120" height="76"></a></td>
-                    <td width="120" height="76"><a href="https://oneintranet.veolia.com/pol-rin-innowacje/repozytorium" target="_blank"><img src="{{ asset('uploads/stopka_4.jpg') }}" alt="Pobierz obrazek" style="width:120px;height:76px;margin:0;padding:0;border:none;display:block" border="0" width="120" height="76"></a></td>
-                    <td width="120" height="76"><img src="{{ asset('uploads/stopka_5.jpg') }}" alt="Pobierz obrazek" style="width:120px;height:76px;margin:0;padding:0;border:none;display:block" border="0" width="120" height="76"></td>
+                    <td width="120" height="76"><img src="https://www.inon-news.pl/public/uploads/stopka_1.jpg" alt="Pobierz obrazek" style="width:120px;height:76px;margin:0;padding:0;border:none;display:block" border="0" width="120" height="76"></td>
+                    <td width="120" height="76"><a href="https://oneintranet.veolia.com/pol-rin-innowacje/home" target="_blank"><img src="https://www.inon-news.pl/public/uploads/stopka_2.jpg" alt="Pobierz obrazek" style="width:120px;height:76px;margin:0;padding:0;border:none;display:block" border="0" width="120" height="76"></a></td>
+                    <td width="120" height="76"><a href="https://oneintranet.veolia.com/pol-rin-innowacje/mapa-ekspertow" target="_blank"><img src="https://www.inon-news.pl/public/uploads/stopka_3.jpg" alt="Pobierz obrazek" style="width:120px;height:76px;margin:0;padding:0;border:none;display:block" border="0" width="120" height="76"></a></td>
+                    <td width="120" height="76"><a href="https://oneintranet.veolia.com/pol-rin-innowacje/repozytorium" target="_blank"><img src="https://www.inon-news.pl/public/uploads/stopka_4.jpg" alt="Pobierz obrazek" style="width:120px;height:76px;margin:0;padding:0;border:none;display:block" border="0" width="120" height="76"></a></td>
+                    <td width="120" height="76"><img src="https://www.inon-news.pl/public/uploads/stopka_5.jpg" alt="Pobierz obrazek" style="width:120px;height:76px;margin:0;padding:0;border:none;display:block" border="0" width="120" height="76"></td>
                 </tr>
             </table>
             <table align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;width:600px;padding:0;border-collapse:collapse">
