@@ -84,8 +84,8 @@ return [
     */
 
     'from' => [
-        'address' => env('hello@example.com', 'hello@example.com'),
-        'name' => env('Example', 'Example'),
+        'address' => env('innowacje_newsletter.pl.vpol@veolia.com', 'innowacje_newsletter.pl.vpol@veolia.com'),
+        'name' => env('Departament Innowacji', 'Departament Innowacji'),
     ],
 
     /*
